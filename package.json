@@ -1,0 +1,18 @@
+{
+  "name": "pass-hero",
+  "version": "1.0.0",
+  "description": "Make Complex Passwords and Store it Securely ",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.ts",
+    "build": "npx tsc",
+    "start": "npm run build && nodemon build/index.js"
+  },
+  "keywords": ["password","passwords","passwords-guard","passwords-manager"],
+  "author": "Eslam Mohamed Moawed",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.8.3"
+  }
+}
