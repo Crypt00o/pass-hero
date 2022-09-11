@@ -1,4 +1,4 @@
-const makeRandomPass=(length:number=64)=>{
+const makeRandomPass=(length:number=64):string=>{
 
     const range="0123456789~!@#$%^&*()_+}{[]|abcdefghikjlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let password=""
