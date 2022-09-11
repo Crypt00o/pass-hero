@@ -14,7 +14,7 @@ var keyGen = function (secretFile) {
         }
         else {
             (0, fs_1.writeFileSync)(secretFile, initVector, { flag: "w", encoding: null });
-            (0, fs_1.appendFileSync)(secretFile, key, { flag: "w", encoding: null });
+            (0, fs_1.appendFileSync)(secretFile, key, { flag: "a", encoding: null });
             console.log("[+] Secret Key Generated at : ".concat((0, path_1.join)(__dirname, secretFile)));
         }
     }

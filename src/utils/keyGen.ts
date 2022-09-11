@@ -12,7 +12,7 @@ const keyGen=(secretFile:string):void=>{
         }
         else{
             writeFileSync(secretFile,initVector,{flag:"w",encoding:null})
-            appendFileSync(secretFile,key,{flag:"w",encoding:null})
+            appendFileSync(secretFile,key,{flag:"a",encoding:null})
             console.log(`[+] Secret Key Generated at : ${join(__dirname,secretFile)}`)
         }
     }
