@@ -45,3 +45,4 @@ const argsParse=():Args|false=>{
         process.exit(0)
     }
 }
+export {argsParse}

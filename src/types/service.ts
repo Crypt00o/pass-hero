@@ -1,5 +1,5 @@
 type service={
-    alias:string,
+    service:string,
     account:string,
     password:string
 }

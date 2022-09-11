@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.argsParse = void 0;
 var errorLogger_1 = require("./errorLogger");
 var argsParse = function () {
     try {
@@ -39,3 +40,4 @@ var argsParse = function () {
         process.exit(0);
     }
 };
+exports.argsParse = argsParse;
