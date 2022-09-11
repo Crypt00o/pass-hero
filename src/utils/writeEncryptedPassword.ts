@@ -2,9 +2,9 @@ import {writeFileSync,existsSync} from "fs"
 import { myErrorLogger } from "./errorLogger";
 import { encryptBySecretKeyFile } from "./encryptBySecretKeyFile";
 import { KeyParse } from "../types/KeyParse";
-import { service } from "../types/service";
+import { Service } from "../types/Service";
 
-const writeEncryptedPasswords=(key:KeyParse,data:Array<service>,passHeroPasswordListPath:string):true=>{
+const writeEncryptedPasswords=(key:KeyParse,data:Array<Service>,passHeroPasswordListPath:string):true=>{
 let encryptedDataToSave:Array<string>=[]
     try{
         //loop data to encrypt

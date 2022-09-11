@@ -1,10 +1,10 @@
 import { inputEncode,outputEncode,algorithm } from "./encryptBySecretKeyFile";
 import { KeyParse } from "../types/KeyParse";
-import { service } from "../types/service";
+import { Service } from "../types/Service";
 import {createDecipheriv} from "crypto"
 import { myErrorLogger } from "./errorLogger";
 
-const decryptBySecretKeyFile=(key:KeyParse,passHeroEncryptedData:string):service=>{
+const decryptBySecretKeyFile=(key:KeyParse,passHeroEncryptedData:string):Service=>{
     try{
     const passHeroDeCipher=createDecipheriv(algorithm,key.key,key.initVictor)
     let passHeroDecryptedData=passHeroDeCipher.update(passHeroEncryptedData,outputEncode,inputEncode)

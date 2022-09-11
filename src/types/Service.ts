@@ -1,6 +1,6 @@
-type service={
+type Service={
     service:string,
     account:string,
     password:string
 }
-export {service}
+export {Service}

@@ -1,13 +1,13 @@
 import {createCipheriv} from "crypto"
 import { myErrorLogger } from "./errorLogger"
 import { KeyParse } from "../types/KeyParse"
-import { service } from "../types/service"
+import { Service } from "../types/Service"
 
 const algorithm='aes-256-cbc'
 const outputEncode='base64'
 const inputEncode='utf-8'
 
-const encryptBySecretKeyFile=(key:KeyParse,data:service):string=>{
+const encryptBySecretKeyFile=(key:KeyParse,data:Service):string=>{
 
     try{
         //I Will Use Encrypting Algorithm aes-256-cbc
