@@ -15,7 +15,8 @@ console.log(`
 ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
                                                                                                                                                               
 Password Manager for Createing Complex Passwords and Store it Encrypted With one file , and You can Retrieve it also  with this utility scurely
-Created By Eslam Mohamed Moawed , repo: ${repoUrl}
+Created By Eslam Mohamed Moawed , Member @Divzoon.com
+ repo: ${repoUrl}
 `)
 }
 export {banner,repoUrl}

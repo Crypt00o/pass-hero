@@ -16,7 +16,7 @@ var keyParse = function (secretFilePath) {
         }
     }
     catch (err) {
-        console.log('Error While Parse Key');
+        console.log('[-] Error While Parse Key');
         (0, errorLogger_1.myErrorLogger)(err);
         process.exit(1);
     }

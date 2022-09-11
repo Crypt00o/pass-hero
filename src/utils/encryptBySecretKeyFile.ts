@@ -20,7 +20,7 @@ const encryptBySecretKeyFile=(key:KeyParse,data:service):string=>{
 
     }
     catch(err:unknown){
-        console.log(`Error While Encrypt`)
+        console.log(`[-] Error While Encrypt`)
         myErrorLogger(err)
         process.exit(1)
     }

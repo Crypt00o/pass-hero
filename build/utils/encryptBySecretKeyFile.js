@@ -18,7 +18,7 @@ var encryptBySecretKeyFile = function (key, data) {
         return passHeroEncryptedData;
     }
     catch (err) {
-        console.log("Error While Encrypt");
+        console.log("[-] Error While Encrypt");
         (0, errorLogger_1.myErrorLogger)(err);
         process.exit(1);
     }

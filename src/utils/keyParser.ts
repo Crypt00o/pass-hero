@@ -16,7 +16,7 @@ try{
     }
   }
   catch(err:unknown){
-    console.log('Error While Parse Key')
+    console.log('[-] Error While Parse Key')
     myErrorLogger(err)   
     process.exit(1)
   }
