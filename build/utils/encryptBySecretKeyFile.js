@@ -13,7 +13,7 @@ var encryptBySecretKeyFile = function (key, data) {
     try {
         //I Will Use Encrypting Algorithm aes-256-cbc
         var passHeroCipher = (0, crypto_1.createCipheriv)(algorithm, key.key, key.initVictor);
-        var passHeroEncryptedData = passHeroCipher.update(JSON.stringify(key), inputEncode, outputEncode);
+        var passHeroEncryptedData = passHeroCipher.update(JSON.stringify(data), inputEncode, outputEncode);
         passHeroEncryptedData += passHeroCipher.final(outputEncode);
         return passHeroEncryptedData;
     }

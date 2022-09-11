@@ -9,13 +9,13 @@ var keyGen = function (secretFile) {
     try {
         var initVector = (0, crypto_1.randomBytes)(16);
         var key = (0, crypto_1.randomBytes)(32);
-        if ((0, fs_1.existsSync)((0, path_1.join)(__dirname, secretFile))) {
-            console.log("Key Intialized Before as ".concat((0, path_1.join)(__dirname, secretFile)));
+        if ((0, fs_1.existsSync)((0, path_1.join)(process.cwd(), secretFile))) {
+            console.log("Key Intialized Before as ".concat((0, path_1.join)(process.cwd(), secretFile)));
         }
         else {
             (0, fs_1.writeFileSync)(secretFile, initVector, { flag: "w", encoding: null });
             (0, fs_1.appendFileSync)(secretFile, key, { flag: "a", encoding: null });
-            console.log("[+] Secret Key Generated at : ".concat((0, path_1.join)(__dirname, secretFile)));
+            console.log("[+] Secret Key Generated at : ".concat((0, path_1.join)(process.cwd(), secretFile)));
         }
     }
     catch (err) {

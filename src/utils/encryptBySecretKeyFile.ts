@@ -13,7 +13,7 @@ const encryptBySecretKeyFile=(key:KeyParse,data:service):string=>{
         //I Will Use Encrypting Algorithm aes-256-cbc
         
         const passHeroCipher=createCipheriv(algorithm,key.key,key.initVictor)
-        let passHeroEncryptedData=passHeroCipher.update(JSON.stringify(key),inputEncode,outputEncode)
+        let passHeroEncryptedData=passHeroCipher.update(JSON.stringify(data),inputEncode,outputEncode)
         passHeroEncryptedData+=passHeroCipher.final(outputEncode)
         return passHeroEncryptedData
 
