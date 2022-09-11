@@ -1,18 +1,17 @@
-import { Service } from "../types/Service";
-import { KeySearch } from "../types/KeySearch";
+import { Creds,KeySearch } from "../types/Creds";
 import { myErrorLogger } from "./errorLogger";
-const searchPasswords=(data:Array<Service>,keySearch:KeySearch):Array<Service>|false=>{
+const searchPasswords=(data:Array<Creds>,keySearch:KeySearch):Array<Creds>|false=>{
 
     try{
-        let founded:Array<Service>=[]
+        let founded:Array<Creds>=[]
         for ( let i=0;i<data.length;i++){
-            if(keySearch.account){
-                if(data[i].account==keySearch.account){
+            if(keySearch.user){
+                if(data[i].user==keySearch.user){
                     founded.push(data[i])
                 }
             }
-            if(keySearch.service){
-                if(data[i].service==keySearch.service){
+            if(keySearch.alias){
+                if(data[i].alias==keySearch.alias){
                     founded.push(data[i])
                 } 
             }

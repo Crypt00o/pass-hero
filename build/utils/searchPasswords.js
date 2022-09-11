@@ -6,13 +6,13 @@ var searchPasswords = function (data, keySearch) {
     try {
         var founded = [];
         for (var i = 0; i < data.length; i++) {
-            if (keySearch.account) {
-                if (data[i].account == keySearch.account) {
+            if (keySearch.user) {
+                if (data[i].user == keySearch.user) {
                     founded.push(data[i]);
                 }
             }
-            if (keySearch.service) {
-                if (data[i].service == keySearch.service) {
+            if (keySearch.alias) {
+                if (data[i].alias == keySearch.alias) {
                     founded.push(data[i]);
                 }
             }

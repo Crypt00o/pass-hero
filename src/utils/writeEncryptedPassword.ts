@@ -2,9 +2,9 @@ import {writeFileSync,existsSync} from "fs"
 import { myErrorLogger } from "./errorLogger";
 import { encryptBySecretKeyFile } from "./encryptBySecretKeyFile";
 import { KeyParse } from "../types/KeyParse";
-import { Service } from "../types/Service";
+import { Creds } from "../types/Creds";
 
-const writeEncryptedPasswords=(key:KeyParse,data:Array<Service>,passHeroPasswordListPath:string):true=>{
+const writeEncryptedPasswords=(key:KeyParse,data:Array<Creds>,passHeroPasswordListPath:string):boolean=>{
 let encryptedDataToSave:Array<string>=[]
     try{
         //loop data to encrypt
@@ -19,7 +19,7 @@ let encryptedDataToSave:Array<string>=[]
     catch(err){
         console.log('[-] Error While Writeing Encrypted')
         myErrorLogger(err)
-        process.exit(0)
+        return false;
     }
 }
 

@@ -17,7 +17,7 @@ var writeEncryptedPasswords = function (key, data, passHeroPasswordListPath) {
     catch (err) {
         console.log('[-] Error While Writeing Encrypted');
         (0, errorLogger_1.myErrorLogger)(err);
-        process.exit(0);
+        return false;
     }
 };
 exports.writeEncryptedPasswords = writeEncryptedPasswords;
