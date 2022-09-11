@@ -11,9 +11,11 @@ import { decryptBySecretKeyFile } from "./decryptBySecretKeyFile";
 import { writeEncryptedPasswords } from "./writeEncryptedPassword";
 import { readEncryptedPasswords } from "./readEncryptedPasswords";
 import {searchPasswords} from "./searchPasswords"
+import { makeRandomPass } from "./passwordGenrator";
 
 export{ argsParse,banner,myErrorLogger,keyParse,
 KeyParse,Args,Service,keyGen,encryptBySecretKeyFile,
 decryptBySecretKeyFile,readEncryptedPasswords,
-writeEncryptedPasswords,searchPasswords
+writeEncryptedPasswords,searchPasswords,makeRandomPass,
+
 }

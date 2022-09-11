@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.searchPasswords = exports.writeEncryptedPasswords = exports.readEncryptedPasswords = exports.decryptBySecretKeyFile = exports.encryptBySecretKeyFile = exports.keyGen = exports.keyParse = exports.myErrorLogger = exports.banner = exports.argsParse = void 0;
+exports.makeRandomPass = exports.searchPasswords = exports.writeEncryptedPasswords = exports.readEncryptedPasswords = exports.decryptBySecretKeyFile = exports.encryptBySecretKeyFile = exports.keyGen = exports.keyParse = exports.myErrorLogger = exports.banner = exports.argsParse = void 0;
 var argsParser_1 = require("./argsParser");
 Object.defineProperty(exports, "argsParse", { enumerable: true, get: function () { return argsParser_1.argsParse; } });
 var banner_1 = require("./banner");
@@ -21,3 +21,5 @@ var readEncryptedPasswords_1 = require("./readEncryptedPasswords");
 Object.defineProperty(exports, "readEncryptedPasswords", { enumerable: true, get: function () { return readEncryptedPasswords_1.readEncryptedPasswords; } });
 var searchPasswords_1 = require("./searchPasswords");
 Object.defineProperty(exports, "searchPasswords", { enumerable: true, get: function () { return searchPasswords_1.searchPasswords; } });
+var passwordGenrator_1 = require("./passwordGenrator");
+Object.defineProperty(exports, "makeRandomPass", { enumerable: true, get: function () { return passwordGenrator_1.makeRandomPass; } });
