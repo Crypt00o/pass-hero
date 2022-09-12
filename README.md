@@ -29,7 +29,8 @@
         [if the file after --pass or --key not exists there is a new key or pass file will be generated . 
 
 ```
-![Usage Gif](./docs/usage.gif)
+
+[Click here See Usage Gif](https://im.ge/i/usage.1Mvba8)
 - ###  Next Step : Meet The Pass-Hero Session
 - command structure :` option account='somevalue' password='somevalue' length='somevalue' alias='somevalue' `
 - #### Options :
@@ -49,8 +50,7 @@
      ```
     
 ### Examples : 
-
-![Usage Gif](./docs/usage-full.gif)
+[Click here See Usage Gif](https://im.ge/i/1MvcAh)
 
 <br>
 
