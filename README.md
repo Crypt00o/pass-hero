@@ -30,7 +30,7 @@
 
 ```
 
-[Click here See Usage Gif](https://im.ge/i/usage.1Mvba8)
+[Click here See First Usage Gif](https://im.ge/i/1Mvba8)
 - ###  Next Step : Meet The Pass-Hero Session
 - command structure :` option account='somevalue' password='somevalue' length='somevalue' alias='somevalue' `
 - #### Options :
@@ -50,7 +50,7 @@
      ```
     
 ### Examples : 
-[Click here See Usage Gif](https://im.ge/i/1MvcAh)
+[Click here See Full Usage Gif](https://im.ge/i/1MvcAh)
 
 <br>
 
