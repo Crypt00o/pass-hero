@@ -58,7 +58,7 @@ Pass-Hero >
 ```
 <br>
 
-[Click here See First Usage Gif](https://im.ge/i/1Mvba8)
+[![usage](https://i.im.ge/2022/09/13/1Mvba8.usage.md.gif)](https://im.ge/i/1Mvba8)
 - ###  Next Step : Meet The Pass-Hero Session
 - command structure :` option account='somevalue' password='somevalue' length='somevalue' alias='somevalue' `
 - #### Options :
@@ -78,8 +78,7 @@ Pass-Hero >
      ```
     
 ### Examples : 
-[Click here See Full Usage Gif](https://im.ge/i/1MvcAh)
-
+[![usage-full](https://i.im.ge/2022/09/13/1MvcAh.usage-full.gif)](https://im.ge/i/1MvcAh)
 <br>
 
 - Assume It Like SQL , i mean adding more spefic prams data will help you determine more  spefic result while searching or deleteing
