@@ -1,6 +1,6 @@
 {
   "name": "pass-hero",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make Complex Passwords and Store it Securely ",
   "main": "build/index.js",
   "scripts": {
@@ -21,9 +21,8 @@
   "devDependencies": {
     "typescript": "^4.8.3",
     "@types/node": "^18.7.16"
+  },
+  "bin": {
+    "passhero": "./build/index.js"
   }
-  ,
-  "bin": {  
- "passhero": "./build/index.js"  
-    }
 }
