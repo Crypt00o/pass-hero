@@ -59,6 +59,8 @@ Pass-Hero >
 <br>
 
 [![usage](https://i.im.ge/2022/09/13/1Mvba8.usage.md.gif)](https://im.ge/i/1Mvba8)
+[click here to see usage gif](https://im.ge/i/1Mvba8)
+
 - ###  Next Step : Meet The Pass-Hero Session
 - command structure :` option account='somevalue' password='somevalue' length='somevalue' alias='somevalue' `
 - #### Options :
@@ -78,6 +80,7 @@ Pass-Hero >
      ```
     
 ### Examples : 
+[click here to see full-usage gif](https://im.ge/i/1MvcAh)
 [![usage-full](https://i.im.ge/2022/09/13/1MvcAh.usage-full.gif)](https://im.ge/i/1MvcAh)
 <br>
 
