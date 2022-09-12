@@ -30,6 +30,34 @@
 
 ```
 
+<br>
+
+- ##### it will be like :
+``` 
+crypto@passhero:~/passherotest$   passhero --pass passwordfile --key mynewkey
+
+
+██████╗  █████╗ ███████╗███████╗      ██╗  ██╗███████╗██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔════╝██╔════╝      ██║  ██║██╔════╝██╔══██╗██╔═══██╗
+██████╔╝███████║███████╗███████╗█████╗███████║█████╗  ██████╔╝██║   ██║
+██╔═══╝ ██╔══██║╚════██║╚════██║╚════╝██╔══██║██╔══╝  ██╔══██╗██║   ██║
+██║     ██║  ██║███████║███████║      ██║  ██║███████╗██║  ██║╚██████╔╝
+╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
+                                                                                                                                                              
+Password Manager for Createing Complex Passwords and Store it Encrypted With one file , and You can Retrieve it also  with this utility scurely
+Created By Eslam Mohamed Moawed , Member @Divzoon.com
+ repo: https://github.com/Crypt00o/pass-hero
+
+
+[+] Secret Key Generated as : mynewkey
+[+] Session Started	 For Help Use : help 
+
+
+
+Pass-Hero > 
+```
+<br>
+
 [Click here See First Usage Gif](https://im.ge/i/1Mvba8)
 - ###  Next Step : Meet The Pass-Hero Session
 - command structure :` option account='somevalue' password='somevalue' length='somevalue' alias='somevalue' `
