@@ -4,7 +4,7 @@ import { encryptBySecretKeyFile } from "./encryptBySecretKeyFile";
 import { KeyParse } from "../types/KeyParse";
 import { Creds } from "../types/Creds";
 
-const writeEncryptedPasswords=(key:KeyParse,data:Array<Creds>,passHeroPasswordListPath:string):boolean=>{
+const writeEncryptedPasswords=(key:KeyParse,data:Array<Creds>,passHeroPasswd:string):boolean=>{
 let encryptedDataToSave:Array<string>=[]
     try{
         //loop data to encrypt
@@ -12,7 +12,7 @@ let encryptedDataToSave:Array<string>=[]
            encryptedDataToSave.push(encryptBySecretKeyFile(key,data[i]))
         }
 
-        writeFileSync(passHeroPasswordListPath,JSON.stringify(encryptedDataToSave),{encoding:"utf-8"})
+        writeFileSync(passHeroPasswd,JSON.stringify(encryptedDataToSave),{encoding:"utf-8"})
         return true;
         
     }

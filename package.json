@@ -9,10 +9,22 @@
     "build": "npx tsc",
     "start": "npm run build && nodemon build/index.js"
   },
-  "keywords": ["password","passwords","passwords-guard","passwords-manager"],
+  "keywords": [
+    "pass-hero",
+    "Pass-Hero",
+    "password",
+    "passwords",
+    "passwords-guard",
+    "passwords-manager"
+  ],
   "author": "Eslam Mohamed Moawed",
   "license": "MIT",
-  "dependencies": {
-    "typescript": "^4.8.3"
+  "devDependencies": {
+    "typescript": "^4.8.3",
+    "@types/node": "^18.7.16"
   }
+  ,
+  "bin": {  
+ "passhero": "./build/index.js"  
+    }
 }

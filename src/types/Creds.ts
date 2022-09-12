@@ -1,6 +1,6 @@
 type Creds={
     alias?:string,
-    user?:string,
+    account?:string,
     password?:string,
     password_length?:number
 }

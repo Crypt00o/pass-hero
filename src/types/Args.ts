@@ -1,11 +1,6 @@
 type Args={
-    passHeroPasswordList:string,
+    passHeroPasswd:string,
     passHeroKey:string,
-    option:string,
-    user?:string,
-    pass?:string,
-    alias?:string
-
-
 }
+
 export {Args}

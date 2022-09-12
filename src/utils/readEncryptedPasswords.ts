@@ -4,10 +4,10 @@ import { decryptBySecretKeyFile } from "./decryptBySecretKeyFile"
 import { KeyParse } from "../types/KeyParse"
 import { Creds } from "../types/Creds"
 
- const readEncryptedPasswords=(key:KeyParse,passHeroPasswordListPath:string):Array<Creds>|false=>{
+ const readEncryptedPasswords=(key:KeyParse,passHeroPasswd:string):Array<Creds>=>{
     try{
-        if(existsSync(passHeroPasswordListPath)){
-             let data:Array<any>=JSON.parse(readFileSync(passHeroPasswordListPath,{encoding:"utf-8"}))
+        if(existsSync(passHeroPasswd)){
+             let data:Array<any>=JSON.parse(readFileSync(passHeroPasswd,{encoding:"utf-8"}))
              //loop decrypting data
              for(let i:number=0;i<data.length;i++){
                 data[i]=decryptBySecretKeyFile(key,data[i])
@@ -18,13 +18,13 @@ import { Creds } from "../types/Creds"
     
         else{
             //passHeroPasswordListPath not exists
-            return false
+            return []
         }
     }
     catch(err){
         console.log('[-] Error While Reading Passwords from Passwords file')
         myErrorLogger(err)
-        process.exit(1)
+        return []
     }
  }
 

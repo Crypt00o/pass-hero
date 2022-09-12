@@ -1,14 +1,13 @@
 import { makeRandomPass } from "./makeRandomPassword";
 import { Creds } from "../types/Creds";
-import { readEncryptedPasswords } from "./readEncryptedPasswords";
 import { writeEncryptedPasswords } from "./writeEncryptedPassword";
 import { myErrorLogger } from "./errorLogger";
 import { KeyParse } from "../types/KeyParse";
 
-const createNewData=(key:KeyParse,newData:Creds,data:Array<Creds>,passHeroPasswordListPath:string):boolean=>{
+const createNewData=(key:KeyParse,newData:Creds,data:Array<Creds>,passHeroPasswd:string):Creds|false=>{
 try{
-    if(!newData.user){
-        newData.user=''        
+    if(!newData.account){
+        newData.account=''        
     }
     if(!newData.password){
     newData.password=makeRandomPass(newData.password_length)
@@ -17,9 +16,16 @@ try{
         newData.alias=''
     }
     data.push(newData)
-    return writeEncryptedPasswords(key,data,passHeroPasswordListPath)
+    if(writeEncryptedPasswords(key,data,passHeroPasswd)){
+        return newData as Creds
+    }
+    else{
+        return false
+    }
+
 }
 catch(err){
+    console.log('[-] Error While Createing Data')
     myErrorLogger(err)
     return false
 }

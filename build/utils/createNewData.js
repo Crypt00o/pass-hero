@@ -4,10 +4,10 @@ exports.createNewData = void 0;
 var makeRandomPassword_1 = require("./makeRandomPassword");
 var writeEncryptedPassword_1 = require("./writeEncryptedPassword");
 var errorLogger_1 = require("./errorLogger");
-var createNewData = function (key, newData, data, passHeroPasswordListPath) {
+var createNewData = function (key, newData, data, passHeroPasswd) {
     try {
-        if (!newData.user) {
-            newData.user = '';
+        if (!newData.account) {
+            newData.account = '';
         }
         if (!newData.password) {
             newData.password = (0, makeRandomPassword_1.makeRandomPass)(newData.password_length);
@@ -16,9 +16,15 @@ var createNewData = function (key, newData, data, passHeroPasswordListPath) {
             newData.alias = '';
         }
         data.push(newData);
-        return (0, writeEncryptedPassword_1.writeEncryptedPasswords)(key, data, passHeroPasswordListPath);
+        if ((0, writeEncryptedPassword_1.writeEncryptedPasswords)(key, data, passHeroPasswd)) {
+            return newData;
+        }
+        else {
+            return false;
+        }
     }
     catch (err) {
+        console.log('[-] Error While Createing Data');
         (0, errorLogger_1.myErrorLogger)(err);
         return false;
     }

@@ -6,8 +6,8 @@ var searchPasswords = function (data, keySearch) {
     try {
         var founded = [];
         for (var i = 0; i < data.length; i++) {
-            if (keySearch.user) {
-                if (data[i].user == keySearch.user) {
+            if (keySearch.account) {
+                if (data[i].account == keySearch.account) {
                     founded.push(data[i]);
                 }
             }

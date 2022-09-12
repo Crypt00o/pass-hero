@@ -1,12 +1,12 @@
-import { Creds,KeySearch } from "../types/Creds";
+import { Creds} from "../types/Creds";
 import { myErrorLogger } from "./errorLogger";
-const searchPasswords=(data:Array<Creds>,keySearch:KeySearch):Array<Creds>|false=>{
+const searchPasswords=(data:Array<Creds>,keySearch:Creds):Array<Creds>|false=>{
 
     try{
         let founded:Array<Creds>=[]
         for ( let i=0;i<data.length;i++){
-            if(keySearch.user){
-                if(data[i].user==keySearch.user){
+            if(keySearch.account){
+                if(data[i].account==keySearch.account){
                     founded.push(data[i])
                 }
             }
