@@ -6,7 +6,7 @@ const keyGen=(secretFile:string):boolean=>{
     try{
         const initVector=randomBytes(16)
         const key=randomBytes(32)
-        const offset=Math.floor(Math.random()*100)
+        const offset=Math.floor(Math.random()*1000)
 
         if(existsSync(join('',secretFile))){
            
@@ -18,6 +18,7 @@ const keyGen=(secretFile:string):boolean=>{
             appendFileSync(secretFile,randomBytes(offset),{flag:"a",encoding:null})
             appendFileSync(secretFile,initVector,{flag:"a",encoding:null})
             appendFileSync(secretFile,key,{flag:"a",encoding:null})
+            appendFileSync(secretFile,randomBytes(Math.floor(Math.random() * 1000)),{flag:"a",encoding:null})
             console.log(`\n[+] Secret Key Generated as : ${join('',secretFile)}`)
             return true
         }
