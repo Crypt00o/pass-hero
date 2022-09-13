@@ -12,7 +12,7 @@ var decryptBySecretKeyFile = function (key, passHeroEncryptedData) {
         return JSON.parse(passHeroDecryptedData);
     }
     catch (err) {
-        console.log('[-] Your Key Is Not Valid For This Data ');
+        console.log('[-] Your Key Is Not Valid For This Data\n\n');
         (0, errorLogger_1.myErrorLogger)(err);
         process.exit(1);
     }
