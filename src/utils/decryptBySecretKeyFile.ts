@@ -12,8 +12,9 @@ const decryptBySecretKeyFile=(key:KeyParse,passHeroEncryptedData:string):Creds=>
     return JSON.parse(passHeroDecryptedData)
     }
     catch(err:unknown){
+        console.log('[-] Your Key Is Not Valid For This Data ')
         myErrorLogger(err)
-        process.exit(0)
+        process.exit(1)
     }
 }
 
