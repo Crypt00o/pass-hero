@@ -4,16 +4,17 @@ exports.sessionParser = void 0;
 var errorLogger_1 = require("./errorLogger");
 var sessionParser = function (line) {
     try {
-        var sessionParamsRegex = /account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'/g;
+        var sessionParamsRegex = /account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'|newaccount='([^']*)'|newpassword='([^']*)'|newalias='([^']*)'/g;
         var option = line.split(" ")[0];
         var valueRegex = /'([^']*)'/g;
         var params = line.match(sessionParamsRegex);
         var data = {};
-        if (!["create", "search", "delete", "exit", "list", "help"].includes(option.toLowerCase())) {
+        var updateData = {};
+        if (!["create", "search", "delete", "exit", "list", "help", "edit"].includes(option.toLowerCase())) {
             return false;
         }
         if (params == null) {
-            return { data: {}, option: option };
+            return { data: {}, option: option, updateData: {} };
         }
         if (params != null) {
             for (var i in params) {
@@ -31,9 +32,18 @@ var sessionParser = function (line) {
                         data.password_length = parseInt(params[i].match(valueRegex)[0].replace(/'/g, ''));
                     }
                 }
+                if (params[i].split('=')[0] == 'newalias') {
+                    updateData.alias = params[i].match(valueRegex)[0].replace(/'/g, '');
+                }
+                if (params[i].split('=')[0] == 'newaccount') {
+                    updateData.account = params[i].match(valueRegex)[0].replace(/'/g, '');
+                }
+                if (params[i].split('=')[0] == 'newpassword') {
+                    updateData.password = params[i].match(valueRegex)[0].replace(/'/g, '');
+                }
             }
         }
-        return { data: data, option: option };
+        return { data: data, option: option, updateData: updateData };
     }
     catch (err) {
         console.log("[-] Error While Parse Params");

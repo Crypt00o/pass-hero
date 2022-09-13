@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.help = exports.sessionOptionsSelector = exports.sessionOptionsChecker = exports.usage = exports.sessionParser = exports.removeData = exports.createNewData = exports.makeRandomPass = exports.searchPasswords = exports.writeEncryptedPasswords = exports.readEncryptedPasswords = exports.decryptBySecretKeyFile = exports.encryptBySecretKeyFile = exports.keyGen = exports.keyParse = exports.myErrorLogger = exports.repoUrl = exports.banner = exports.argsParse = void 0;
+exports.help = exports.sessionOptionsSelector = exports.sessionOptionsChecker = exports.usage = exports.sessionParser = exports.editExistsData = exports.removeData = exports.createNewData = exports.makeRandomPass = exports.searchPasswords = exports.writeEncryptedPasswords = exports.readEncryptedPasswords = exports.decryptBySecretKeyFile = exports.encryptBySecretKeyFile = exports.keyGen = exports.keyParse = exports.myErrorLogger = exports.repoUrl = exports.banner = exports.argsParse = void 0;
 var argsParser_1 = require("./argsParser");
 Object.defineProperty(exports, "argsParse", { enumerable: true, get: function () { return argsParser_1.argsParse; } });
 var banner_1 = require("./banner");
@@ -28,6 +28,8 @@ var createNewData_1 = require("./createNewData");
 Object.defineProperty(exports, "createNewData", { enumerable: true, get: function () { return createNewData_1.createNewData; } });
 var removeData_1 = require("./removeData");
 Object.defineProperty(exports, "removeData", { enumerable: true, get: function () { return removeData_1.removeData; } });
+var editExistsData_1 = require("./editExistsData");
+Object.defineProperty(exports, "editExistsData", { enumerable: true, get: function () { return editExistsData_1.editExistsData; } });
 var sessionParser_1 = require("./sessionParser");
 Object.defineProperty(exports, "sessionParser", { enumerable: true, get: function () { return sessionParser_1.sessionParser; } });
 var usage_1 = require("./usage");

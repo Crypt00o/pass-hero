@@ -5,6 +5,7 @@ import { createNewData } from "./createNewData";
 import { searchPasswords } from "./searchPasswords";
 import { sessionOptionsChecker } from "./sessionOptionsChecker";
 import { removeData } from "./removeData";
+import { editExistsData } from "./editExistsData";
 import { help } from "./help";
 const sessionOptionsSelector=(key:KeyParse,params:SessionParse,allData:Array<Creds>,passHeroPasswd:string):void=>{
 if(sessionOptionsChecker(params)){
@@ -59,6 +60,19 @@ if(sessionOptionsChecker(params)){
         case "help":
             help()
         break;
+
+        case "edit":
+            const dataToUpdate=editExistsData(key,allData,params.data,params.updateData,passHeroPasswd)
+            if((dataToUpdate as Array<Creds>).length==0){
+                console.log('\n[-] Data Not Found To Update')
+            }
+            if((dataToUpdate as Array<Creds>).length!=0){
+                console.log(`\n[+] Updated ${(dataToUpdate as Array<Creds>).length} of Creds\n`)
+                for(let i=0;i<(dataToUpdate as Array<Creds>).length;i++){
+                    console.log(i+1,":",(dataToUpdate as Array<Creds>)[i])
+                }
+            }
+        break;
         
         case "delete":
             const dataToRemove=removeData(key,allData,params.data,passHeroPasswd)
@@ -66,13 +80,13 @@ if(sessionOptionsChecker(params)){
                 console.log('\n[-] Data Not Found To Delete')
             }
             if((dataToRemove as Array<Creds>).length!=0){
-                console.log(`[+] Deleted ${(dataToRemove as Array<Creds>).length} of Creds`)
+                console.log(`\n[+] Deleted ${(dataToRemove as Array<Creds>).length} of Creds`)
                 for(let i=0;i<(dataToRemove as Array<Creds>).length;i++){
                     console.log(i+1,":",(dataToRemove as Array<Creds>)[i])
                 }
             }
             else{
-                console.log('[-] Can,t Create Data May Be Bug or Error')
+                console.log('[-] Can,t Delete Data May Be Bug or Error')
             }
             
             

@@ -14,6 +14,7 @@ import {searchPasswords} from "./searchPasswords"
 import { makeRandomPass } from "./makeRandomPassword";
 import { createNewData } from "./createNewData";
 import { removeData } from "./removeData";
+import { editExistsData } from "./editExistsData";
 import { SessionParse } from "../types/SessionParse";
 import { sessionParser } from "./sessionParser";
 import { usage } from "./usage";
@@ -23,6 +24,6 @@ import { help } from "./help";
 export { argsParse,banner,repoUrl,myErrorLogger,keyParse,KeyParse,
 Args,Creds,SessionParse,keyGen,encryptBySecretKeyFile,
 decryptBySecretKeyFile,readEncryptedPasswords,writeEncryptedPasswords,
-searchPasswords,makeRandomPass,createNewData,removeData,sessionParser,
+searchPasswords,makeRandomPass,createNewData,removeData,editExistsData,sessionParser,
 usage,sessionOptionsChecker,sessionOptionsSelector,help
 }

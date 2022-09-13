@@ -5,6 +5,7 @@ var createNewData_1 = require("./createNewData");
 var searchPasswords_1 = require("./searchPasswords");
 var sessionOptionsChecker_1 = require("./sessionOptionsChecker");
 var removeData_1 = require("./removeData");
+var editExistsData_1 = require("./editExistsData");
 var help_1 = require("./help");
 var sessionOptionsSelector = function (key, params, allData, passHeroPasswd) {
     if ((0, sessionOptionsChecker_1.sessionOptionsChecker)(params)) {
@@ -53,19 +54,31 @@ var sessionOptionsSelector = function (key, params, allData, passHeroPasswd) {
             case "help":
                 (0, help_1.help)();
                 break;
+            case "edit":
+                var dataToUpdate = (0, editExistsData_1.editExistsData)(key, allData, params.data, params.updateData, passHeroPasswd);
+                if (dataToUpdate.length == 0) {
+                    console.log('\n[-] Data Not Found To Update');
+                }
+                if (dataToUpdate.length != 0) {
+                    console.log("\n[+] Updated ".concat(dataToUpdate.length, " of Creds\n"));
+                    for (var i = 0; i < dataToUpdate.length; i++) {
+                        console.log(i + 1, ":", dataToUpdate[i]);
+                    }
+                }
+                break;
             case "delete":
                 var dataToRemove = (0, removeData_1.removeData)(key, allData, params.data, passHeroPasswd);
                 if (dataToRemove.length == 0) {
                     console.log('\n[-] Data Not Found To Delete');
                 }
                 if (dataToRemove.length != 0) {
-                    console.log("[+] Deleted ".concat(dataToRemove.length, " of Creds"));
+                    console.log("\n[+] Deleted ".concat(dataToRemove.length, " of Creds"));
                     for (var i = 0; i < dataToRemove.length; i++) {
                         console.log(i + 1, ":", dataToRemove[i]);
                     }
                 }
                 else {
-                    console.log('[-] Can,t Create Data May Be Bug or Error');
+                    console.log('[-] Can,t Delete Data May Be Bug or Error');
                 }
                 break;
         }
