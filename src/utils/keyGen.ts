@@ -18,7 +18,7 @@ const keyGen=(secretFile:string):boolean=>{
             appendFileSync(secretFile,randomBytes(offset),{flag:"a",encoding:null})
             appendFileSync(secretFile,initVector,{flag:"a",encoding:null})
             appendFileSync(secretFile,key,{flag:"a",encoding:null})
-            appendFileSync(secretFile,randomBytes(Math.floor(Math.random() * (9999999999 - 99)/2+99)),{flag:"a",encoding:null})
+            appendFileSync(secretFile,randomBytes(Math.floor(Math.random() * (6666666 - 99)/2+99)),{flag:"a",encoding:null})
             console.log(`\n[+] Secret Key Generated as : ${join('',secretFile)}`)
             return true
         }

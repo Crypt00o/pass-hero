@@ -19,7 +19,7 @@ var keyGen = function (secretFile) {
             (0, fs_1.appendFileSync)(secretFile, (0, crypto_1.randomBytes)(offset), { flag: "a", encoding: null });
             (0, fs_1.appendFileSync)(secretFile, initVector, { flag: "a", encoding: null });
             (0, fs_1.appendFileSync)(secretFile, key, { flag: "a", encoding: null });
-            (0, fs_1.appendFileSync)(secretFile, (0, crypto_1.randomBytes)(Math.floor(Math.random() * (9999999999 - 99) / 2 + 99)), { flag: "a", encoding: null });
+            (0, fs_1.appendFileSync)(secretFile, (0, crypto_1.randomBytes)(Math.floor(Math.random() * (6666666 - 99) / 2 + 99)), { flag: "a", encoding: null });
             console.log("\n[+] Secret Key Generated as : ".concat((0, path_1.join)('', secretFile)));
             return true;
         }
