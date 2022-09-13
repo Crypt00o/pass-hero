@@ -1,6 +1,6 @@
 {
   "name": "pass-hero",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Make Complex Passwords and Store it Securely ",
   "main": "build/index.js",
   "scripts": {
