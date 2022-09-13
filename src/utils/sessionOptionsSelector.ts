@@ -61,7 +61,7 @@ if(sessionOptionsChecker(params)){
             help()
         break;
 
-        case "edit":
+        case "update":
             const dataToUpdate=editExistsData(key,allData,params.data,params.updateData,passHeroPasswd)
             if((dataToUpdate as Array<Creds>).length==0){
                 console.log('\n[-] Data Not Found To Update')

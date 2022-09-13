@@ -4,13 +4,13 @@ exports.sessionParser = void 0;
 var errorLogger_1 = require("./errorLogger");
 var sessionParser = function (line) {
     try {
-        var sessionParamsRegex = /account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'|newaccount='([^']*)'|newpassword='([^']*)'|newalias='([^']*)'/g;
+        var sessionParamsRegex = /account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'|setaccount='([^']*)'|setpassword='([^']*)'|setalias='([^']*)'/g;
         var option = line.split(" ")[0];
         var valueRegex = /'([^']*)'/g;
         var params = line.match(sessionParamsRegex);
         var data = {};
         var updateData = {};
-        if (!["create", "search", "delete", "exit", "list", "help", "edit"].includes(option.toLowerCase())) {
+        if (!["create", "search", "delete", "exit", "list", "help", "update"].includes(option.toLowerCase())) {
             return false;
         }
         if (params == null) {
@@ -32,13 +32,13 @@ var sessionParser = function (line) {
                         data.password_length = parseInt(params[i].match(valueRegex)[0].replace(/'/g, ''));
                     }
                 }
-                if (params[i].split('=')[0] == 'newalias') {
+                if (params[i].split('=')[0] == 'setalias') {
                     updateData.alias = params[i].match(valueRegex)[0].replace(/'/g, '');
                 }
-                if (params[i].split('=')[0] == 'newaccount') {
+                if (params[i].split('=')[0] == 'setaccount') {
                     updateData.account = params[i].match(valueRegex)[0].replace(/'/g, '');
                 }
-                if (params[i].split('=')[0] == 'newpassword') {
+                if (params[i].split('=')[0] == 'setpassword') {
                     updateData.password = params[i].match(valueRegex)[0].replace(/'/g, '');
                 }
             }

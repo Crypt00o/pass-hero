@@ -54,7 +54,7 @@ var sessionOptionsSelector = function (key, params, allData, passHeroPasswd) {
             case "help":
                 (0, help_1.help)();
                 break;
-            case "edit":
+            case "update":
                 var dataToUpdate = (0, editExistsData_1.editExistsData)(key, allData, params.data, params.updateData, passHeroPasswd);
                 if (dataToUpdate.length == 0) {
                     console.log('\n[-] Data Not Found To Update');

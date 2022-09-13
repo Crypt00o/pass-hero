@@ -32,13 +32,13 @@ var sessionOptionsChecker = function (params) {
     if (params.option == "help") {
         return true;
     }
-    if (params.option == "edit") {
+    if (params.option == "update") {
         if (params.data.account || params.data.alias || params.data.password) {
             if (params.updateData.account || params.updateData.alias || params.updateData.password) {
                 return true;
             }
             else {
-                console.log('You Need To provide newaccount or newalias or newpassword To Use While Edit ');
+                console.log('You Need To provide setaccount or setalias or setpassword To Use While Edit ');
                 return false;
             }
         }

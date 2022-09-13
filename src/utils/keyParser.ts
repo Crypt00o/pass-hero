@@ -7,7 +7,8 @@ const keyParse=(secretFilePath:string):KeyParse=>{
 try{
     if(existsSync(secretFilePath)){
         const keyData=readFileSync(secretFilePath,{flag:"r","encoding":null})
-        const key:KeyParse={key:keyData.slice(16,48) ,initVictor:keyData.slice(0,16)}
+        const offet=keyData[0]
+        const key:KeyParse={key:keyData.slice(offet+17,offet+49) ,initVictor:keyData.slice(offet+1,offet+17)}
         return key
     }
     else{

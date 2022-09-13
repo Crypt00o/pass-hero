@@ -7,13 +7,13 @@ var errorLogger_1 = require("./errorLogger");
 var createNewData = function (key, newData, data, passHeroPasswd) {
     try {
         if (!newData.account) {
-            newData.account = '';
+            newData.account = 'empty';
         }
         if (!newData.password) {
             newData.password = (0, makeRandomPassword_1.makeRandomPass)(newData.password_length);
         }
         if (!newData.alias) {
-            newData.alias = '';
+            newData.alias = 'empty';
         }
         data.push(newData);
         if ((0, writeEncryptedPassword_1.writeEncryptedPasswords)(key, data, passHeroPasswd)) {

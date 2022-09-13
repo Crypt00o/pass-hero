@@ -3,14 +3,14 @@ import { SessionParse } from "../types/SessionParse";
 import { myErrorLogger } from "./errorLogger";
 const sessionParser=(line:string):SessionParse|false=>{
     try{
-    const sessionParamsRegex=/account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'|newaccount='([^']*)'|newpassword='([^']*)'|newalias='([^']*)'/g
+    const sessionParamsRegex=/account='([^']*)'|alias='([^']*)'|length='([^']*)'|password='([^']*)'|setaccount='([^']*)'|setpassword='([^']*)'|setalias='([^']*)'/g
     const option:string=line.split(" ")[0]
     const valueRegex=/'([^']*)'/g
     const params=line.match(sessionParamsRegex)
     let data:Creds={}
     let updateData:Creds={}
 
-    if(!["create","search","delete","exit","list","help","edit"].includes(option.toLowerCase())){
+    if(!["create","search","delete","exit","list","help","update"].includes(option.toLowerCase())){
         return false
     }
     if(params==null){
@@ -35,13 +35,13 @@ const sessionParser=(line:string):SessionParse|false=>{
                 data.password_length=parseInt((params[i].match(valueRegex) as RegExpMatchArray)[0].replace(/'/g,''))
             }
         }
-        if(params[i].split('=')[0]=='newalias'){
+        if(params[i].split('=')[0]=='setalias'){
             updateData.alias=(params[i].match(valueRegex) as RegExpMatchArray)[0].replace(/'/g,'')
         }
-        if(params[i].split('=')[0]=='newaccount'){
+        if(params[i].split('=')[0]=='setaccount'){
             updateData.account=(params[i].match(valueRegex) as RegExpMatchArray)[0].replace(/'/g,'')
         }
-        if(params[i].split('=')[0]=='newpassword'){
+        if(params[i].split('=')[0]=='setpassword'){
             updateData.password=(params[i].match(valueRegex) as RegExpMatchArray)[0].replace(/'/g,'')
         }
 

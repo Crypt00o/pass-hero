@@ -7,7 +7,8 @@ var keyParse = function (secretFilePath) {
     try {
         if ((0, fs_1.existsSync)(secretFilePath)) {
             var keyData = (0, fs_1.readFileSync)(secretFilePath, { flag: "r", "encoding": null });
-            var key = { key: keyData.slice(16, 48), initVictor: keyData.slice(0, 16) };
+            var offet = keyData[0];
+            var key = { key: keyData.slice(offet + 17, offet + 49), initVictor: keyData.slice(offet + 1, offet + 17) };
             return key;
         }
         else {

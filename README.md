@@ -69,7 +69,9 @@ Pass-Hero >
      create : for createing encrypted credentials with passwords ,password can be set manually or it will be random complex password
      
      search : for search in encrypted passwords with data as parameters you can search with password or account or alias  ,or all of this combained
-     
+
+     update : for update encrypted Credentials with old data as parameters and new data as setparameters
+
      delete : for delete from encrypted passwords with data as parameters you can search with 
      
      list   : for read and list all encrypted passwords from spefic enctypted passwords file maded By This Pass-Hero
@@ -97,7 +99,6 @@ Pass-Hero >
 - #### Search :        
 - you must use params with any of password,alias,account When You Determine more params You Get More Determined Results.         
 
- <br>
 
 - this will show all passwords & accounts which it,s alias value is google : 
         ```search alias='google'```
@@ -112,8 +113,18 @@ Pass-Hero >
     ```delete alias='google'```
  - this will delete any account,passwords which it,s alias value is google and account value is me@example.com :
     ```delete alias='google' account='me@example.com'```
-    <br> 
-    
+<br>
+
+- #### Update:    
+- you must use params and setparams with any password,alias,account as params and  setpassword,setalias,setaccount as setparams.
+- this will update account with new value where account has value example@gmail.com and alias has value google
+
+  ```update account='example@gmail.com'  alias='google' setaccount='eslam@gmail.com' ```
+- this will update password for any alias has value of 'noone'
+  ``` update alias='noone' setpassword='mynewpassword'```
+
+<br>
+
 - #### List :
  - this command doesn,t require any parameters , this will list and read all encrypted passwords from spefic Pass-Hero file
 
