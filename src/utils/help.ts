@@ -1,6 +1,6 @@
 
-const help=()=>{
-    console.log(`
+const help = () => {
+   console.log(`
     
     option account='' password='' length='' alias='' 
     
@@ -40,6 +40,6 @@ const help=()=>{
     #Exit : this will exit Pass-Hero Session
         exit 
          
-    `)
-}
-export {help}
+    `);
+};
+export { help };

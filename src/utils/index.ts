@@ -1,5 +1,5 @@
 import { argsParse } from "./argsParser";
-import { banner,repoUrl } from "./banner";
+import { banner, repoUrl } from "./banner";
 import { myErrorLogger } from "./errorLogger";
 import { KeyParse } from "../types/KeyParse";
 import { Args } from "../types/Args";
@@ -10,7 +10,7 @@ import { encryptBySecretKeyFile } from "./encryptBySecretKeyFile";
 import { decryptBySecretKeyFile } from "./decryptBySecretKeyFile";
 import { writeEncryptedPasswords } from "./writeEncryptedPassword";
 import { readEncryptedPasswords } from "./readEncryptedPasswords";
-import {searchPasswords} from "./searchPasswords"
+import { searchPasswords } from "./searchPasswords";
 import { makeRandomPass } from "./makeRandomPassword";
 import { createNewData } from "./createNewData";
 import { removeData } from "./removeData";
@@ -21,9 +21,10 @@ import { usage } from "./usage";
 import { sessionOptionsChecker } from "./sessionOptionsChecker";
 import { sessionOptionsSelector } from "./sessionOptionsSelector";
 import { help } from "./help";
-export { argsParse,banner,repoUrl,myErrorLogger,keyParse,KeyParse,
-Args,Creds,SessionParse,keyGen,encryptBySecretKeyFile,
-decryptBySecretKeyFile,readEncryptedPasswords,writeEncryptedPasswords,
-searchPasswords,makeRandomPass,createNewData,removeData,editExistsData,sessionParser,
-usage,sessionOptionsChecker,sessionOptionsSelector,help
-}
+export {
+    argsParse, banner, repoUrl, myErrorLogger, keyParse, KeyParse,
+    Args, Creds, SessionParse, keyGen, encryptBySecretKeyFile,
+    decryptBySecretKeyFile, readEncryptedPasswords, writeEncryptedPasswords,
+    searchPasswords, makeRandomPass, createNewData, removeData, editExistsData, sessionParser,
+    usage, sessionOptionsChecker, sessionOptionsSelector, help
+};

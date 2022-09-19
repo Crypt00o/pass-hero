@@ -1,6 +1,6 @@
-type Args={
-    passHeroPasswd:string,
-    passHeroKey:string,
-}
+type Args = {
+    passHeroPasswd: string,
+    passHeroKey: string,
+};
 
-export {Args}
+export { Args };

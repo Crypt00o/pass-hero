@@ -1,6 +1,6 @@
-const usage=():void=>{
-console.log(
-    `[+] Usage : 
+const usage = (): void => {
+    console.log(
+        `[+] Usage : 
        
     passhero --pass myencryptedpasswordfile --key myencryption&decryptionkey 
 
@@ -12,6 +12,6 @@ console.log(
         [if the file after --pass or --key not exists there is a new key or pass file will be generated ]
 
     `
-)
-}
-export {usage}
+    );
+};
+export { usage };
