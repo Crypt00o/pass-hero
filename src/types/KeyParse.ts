@@ -1,5 +1,5 @@
-type KeyParse={
-    initVictor:Buffer,
-    key:Buffer
-}
-export {KeyParse}
+type KeyParse = {
+    initVictor: Buffer,
+    key: Buffer;
+};
+export { KeyParse };
